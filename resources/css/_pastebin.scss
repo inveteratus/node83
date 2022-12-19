@@ -1,0 +1,68 @@
+.pastebin-form {
+    @apply flex flex-grow;
+    & > form {
+        @apply flex flex-col flex-grow px-3;
+        & > div:first-of-type {
+            @apply flex flex-grow;
+            label {
+                @apply sr-only
+            }
+
+            textarea {
+                @apply w-full block shadow-sm border-gray-700 text-sm rounded bg-neutral-900 text-gray-400 resize-none
+                flex flex-grow focus:ring-indigo-500 font-mono
+            }
+        }
+
+        & > div:last-of-type {
+            @apply flex flex-none justify-between py-3 items-center;
+            & > div:first-of-type {
+                @apply flex items-center space-x-2;
+                button {
+                    @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded
+                    text-gray-50 bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2
+                    focus:ring-indigo-500 focus:ring-offset-gray-800
+                }
+
+                a {
+                    @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded
+                    text-gray-50 bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2
+                    focus:ring-gray-500 focus:ring-offset-gray-800
+                }
+            }
+
+            & > div:last-of-type {
+                @apply text-gray-500 flex space-x-2.5;
+                label {
+                    @apply cursor-pointer text-gray-700;
+                    &.active {
+                        @apply text-gray-300 cursor-default
+                    }
+
+                    input {
+                        @apply hidden
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pastebin-view {
+    @apply flex flex-grow;
+    & > pre {
+        @apply flex flex-grow shadow-sm border border-gray-700 text-sm rounded bg-neutral-900 text-gray-400 mx-4 py-2 px-3
+    }
+}
+
+.pastebin-footer {
+    @apply flex justify-between px-4;
+    div {
+        @apply flex space-x-2 py-4;
+        a {
+            @apply inline-flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded
+            text-gray-50 bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2
+            focus:ring-gray-500 focus:ring-offset-gray-800
+        }
+    }
+}
